@@ -1,0 +1,217 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+    \item\small{
+        {#1 \vspace{-2pt}}
+    }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+    }
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textbf{\small #2} \\
+        \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+        \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\begin{center}
+    {\Huge \scshape Fedor Kuyanov} \\ \vspace{5pt}
+    13 Yelninskaya, Moscow, Russia \\ \vspace{5pt}
+    \small \raisebox{-0.1\height}\faPhone\ +7 (926) 780-75-40 ~ \href{mailto:x@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{feodor.kuyanov@gmail.com}} ~ 
+    \href{https://github.com/}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/kuyanov}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+        {Higher School of Economics}{2020 -- July 2024}
+        {Bachelor of Science in Computer Science, GPA 9.76 (1-10)}{Moscow, Russia}
+    \resumeSubHeadingListEnd
+
+
+%----------EXPERIENCE-----------
+\section{Experience}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+        {Yandex}{May 2021 -- August 2021}
+        {Software Engineer Intern}{Moscow, Russia}
+    \resumeItemListStart
+        \resumeItem{Worked in a team responsible for the quality of Yandex voice assistant Alice.}
+        \resumeItem{Enhanced scenario classification by adding new factors and adapting learning process for different devices.}
+        \resumeItem{Added tests to ensure classifier's validity.}
+        \resumeItem{Ran an experiment on real users to measure its quality.}
+        \resumeItem{As a result, the classifier's quality had been improved on some devices by 30\%.}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+
+%-----------PROJECTS------------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{\href{https://github.com/m20-sch57/Fejudge}{Fejudge}} $|$ \emph{Python, Linux kernel}}{September 2021}
+        \resumeItemListStart
+            \resumeItem{This is a contest management system, like Topcoder or Codeforces.}
+            \resumeItem{It uses several Linux kernel features and supports simultaneous evaluation of solutions on different machines.}
+            \resumeItem{Also provides a nice web interface for participants.}
+        \resumeItemListEnd
+        \vspace{-13pt}
+    \resumeProjectHeading
+        {\textbf{\href{https://github.com/m20-sch57/thetruehat}{TheTrueHat}} $|$ \emph{JavaScript}}{August 2021}
+        \resumeItemListStart
+            \resumeItem{Hat (Alias) is a multiplayer game, in which each player picks a word from the hat and explains it to their partner as quickly as possible. This project allows you to play Hat from your browser.}
+        \resumeItemListEnd 
+        \vspace{-13pt}
+    \resumeProjectHeading
+        {\textbf{\href{https://github.com/JaggedLine/KotlinLine}{JaggedLine}} $|$ \emph{Kotlin}}{January 2021}
+        \resumeItemListStart
+            \resumeItem{This is a geometric puzzle, in which you must build the longest non-self-intersecting polygonal chain from start to end.}
+        \resumeItemListEnd
+        \vspace{-13pt}
+    \resumeProjectHeading
+        {\textbf{\href{https://github.com/m20-sch57/exam-system}{Examiner}} $|$ \emph{Python, QT}}{September 2019}
+        \resumeItemListStart
+            \resumeItem{The purpose of this project is to build a platform to automate the exams.}
+            \resumeItem{Provides UIs for students and teachers and enables automatic verification of various tasks.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+
+%------PROGRAMMING SKILLS-------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbf{Languages}{: C++, Python, Kotlin, HTML/CSS, JavaScript, Bash, SQL} \\
+        \textbf{Frameworks}{: QT, numpy, pytorch, Flask, React, Vue} \\
+        \textbf{Tools}{: git, docker, gdb, cmake} \\
+        \textbf{Computer science skills}{: advanced algorithms and data structures -- studied since 2016 for programming competitions.} \\
+        \textbf{Mathematical skills}{: linear algebra and geometry, discrete math, probability theory, math analysis.} \\
+        \textbf{Interested in}{: theoretical computer science, development of high-load systems, web-servers, frontend (a little).} \\
+    }}
+\end{itemize}
+\vspace{-16pt}
+
+
+%-----------OLYMPIADS-----------
+\section{Olympiad achievements}
+    \resumeItemListStart
+        \resumeSubItem{Gold medal at \href{https://imc-math.org.uk/?year=2021}{IMC 2021}}
+        \resumeSubItem{8th place (silver medal) at the Semifinal ICPC 2020 – 2021, NERC}
+        \resumeSubItem{1st place at the All-Russian Team Olympiad in Informatics (2018-2019)}
+        \resumeSubItem{Winner of the All-Russian Olympiad in Informatics (2018)}
+        \resumeSubItem{Prize-winner of the All-Russian Olympiad in Mathematics (2018, 2019, 2020)}
+        \resumeSubItem{\href{https://codeforces.com/profile/Kuyan}{Codeforces}}
+    \resumeItemListEnd
+
+
+%-----------LANGUAGES-----------
+\section{Languages}
+    \resumeItemListStart
+        \resumeSubItem{English: C1 (IELTS 7.0)}
+        \resumeSubItem{Russian: Native speaker}
+    \resumeItemListEnd
+
+
+\end{document}
