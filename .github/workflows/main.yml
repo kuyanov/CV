@@ -10,11 +10,11 @@ jobs:
       - name: Build
         run: docker build -t cv .
       - name: Run
-        run: docker run -v $PWD/CV:/workdir/CV -t cv
+        run: docker run -v $PWD/resume:/CV/resume -t cv
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
           BRANCH: gh-pages
-          FOLDER: CV
+          FOLDER: resume
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

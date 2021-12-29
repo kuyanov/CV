@@ -1,7 +1,6 @@
 FROM kuyanov/texlive:latest
 
-COPY ./entrypoint.sh /workdir/entrypoint.sh
-WORKDIR /workdir
+WORKDIR /CV
 
-ENTRYPOINT [ "bash", "entrypoint.sh" ]
+ENTRYPOINT [ "bash", "-c", "pdflatex -interaction=nonstopmode -output-directory=resume resume/resume.tex" ]
 
