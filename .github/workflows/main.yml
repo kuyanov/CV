@@ -3,18 +3,35 @@ on: [push]
 jobs:
   compile_cv_common:
     runs-on: ubuntu-latest
-    name: Compile and deploy cv-common
+    name: Compile & deploy cv-common
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
-        run: docker build -t cv --build-arg target=common .
+        run: docker build -t cv_common --build-arg target=common .
       - name: Run
-        run: docker run -v $PWD/common:/CV/common -t cv
+        run: docker run -v $PWD/common:/CV/common -t cv_common
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
           BRANCH: gh-pages
           FOLDER: common
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  compile_cv_math:
+    runs-on: ubuntu-latest
+    name: Compile & deploy cv-math
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        run: docker build -t cv_math --build-arg target=math .
+      - name: Run
+        run: docker run -v $PWD/math:/CV/math -t cv_math
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: math
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
