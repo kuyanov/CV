@@ -9,15 +9,15 @@ jobs:
         uses: actions/checkout@v2
       - name: Create pdf folder
         run: mkdir pdf
-      - name: Build CV-common
+      - name: Build cv_common
         run: docker build -t cv_common --build-arg target=common .
-      - name: Run CV-common
+      - name: Run cv_common
         run: docker run -v $PWD/common:/CV/common -t cv_common
       - name: Collect cv-common.pdf
         run: cp common/cv-common.pdf pdf/cv-common.pdf
-      - name: Build CV-math
+      - name: Build cv_math
         run: docker build -t cv_math --build-arg target=math .
-      - name: Run CV-math
+      - name: Run cv_math
         run: docker run -v $PWD/math:/CV/math -t cv_math
       - name: Collect cv-math.pdf
         run: cp math/cv-math.pdf pdf/cv-math.pdf
