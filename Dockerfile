@@ -1,6 +1,9 @@
 FROM kuyanov/texlive:latest
 
+ARG target=common
+ENV target $target
+
 WORKDIR /CV
 
-ENTRYPOINT [ "bash", "-c", "pdflatex -interaction=nonstopmode -output-directory=resume resume/resume.tex" ]
+ENTRYPOINT [ "bash", "-c", "pdflatex -interaction=nonstopmode -output-directory=$target $target/cv-$target.tex" ]
 
