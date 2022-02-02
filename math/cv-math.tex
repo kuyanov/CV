@@ -49,28 +49,29 @@
 \setlength{\tabcolsep}{0in}
 
 \titleformat{\section}{
-    \vspace{-4pt}\scshape\raggedright\large\bfseries
+    \scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 \pdfgentounicode=1
 
-\newcommand{\resumeSubHeading}[4]{
+\newcommand{\resumeSubHeading}[1]{
+    \item\textbf{#1}\vspace{-7pt}
+}
+
+\newcommand{\resumeTwoLineHeading}[4]{
     \item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textbf{\small #2} \\
         \textit{\small #3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
         \small #1 & \textbf{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-7pt}
 }
-
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -78,6 +79,9 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
 \newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 
 \begin{document}
@@ -94,33 +98,57 @@
 
 \section{Education}
     \resumeSubHeadingListStart
-        \resumeSubHeading
+
+        \resumeTwoLineHeading
         {Higher School of Economics}{September 2020 -- July 2024}
-        {Bachelor of Science in Computer Science, GPA 9.81 (1-10)}{Moscow, Russia}
+        {Bachelor in Computer Science, GPA 9.81/10}{Moscow, Russia}
+        
+        \resumeSubHeading{Summer schools}
+        \resumeItemListStart
+            \resumeItem{\href{https://mccme.ru/dubna/eng/}{\underline{Contemporary Mathematics}} (2019)}
+            \resumeItem{\href{https://www.turgor.ru/en/lktg/index.php}{\underline{Summer conference of the International mathematical Tournament of towns}} (2018)}
+        \resumeItemListEnd
+
     \resumeSubHeadingListEnd
 
 
 \section{Work experience}
     \resumeSubHeadingListStart
-        \resumeSubHeading
+
+        \resumeTwoLineHeading
         {Yandex}{May 2021 -- August 2021}
         {Software Engineer Intern}{Moscow, Russia}
         \resumeItemListStart
-            \resumeItem{Worked in a team responsible for the quality of Yandex voice assistant Alice.}
+            \resumeItem{Member of the team responsible for the quality of Yandex voice assistant Alice.}
             \resumeItem{Enhanced scenario classification by adding new factors and adapting learning process for different devices.}
-            \resumeItem{Added tests to ensure classifier's validity.}
-            \resumeItem{Ran an experiment on real users to measure its quality.}
             \resumeItem{As a result, the classifier's quality had been improved on some devices by 30\%.}
         \resumeItemListEnd
+
+        \resumeTwoLineHeading
+        {Moscow State School №57}{February 2021 -- March 2021}
+        {Teaching assistant}{Moscow, Russia}
+        \resumeItemListStart
+            \resumeItem{Assisted math analysis in Moscow State School №57, one of the best mathematical schools in Russia.}
+        \resumeItemListEnd
+
+        \resumeTwoLineHeading
+        {Summer informatics workshop}{June 2020}
+        {Coach}{Moscow, Russia}
+        \resumeItemListStart
+            \resumeItem{Prepared practice contests and tutorials for Russian national team candidates.}
+        \resumeItemListEnd
+
+        \resumeSubHeading{Other}
+        \resumeItemListStart
+            \resumeItem{Jury member of All-Russian Olympiad in Mathematics (regional stage) and \href{https://olympiads.mccme.ru/matprazdnik}{\underline{Matprazdnik}}.}
+        \resumeItemListEnd
+
     \resumeSubHeadingListEnd
 
 
-\section{Other experience}
+\section{Conferences}
     \resumeItemListStart
-        \resumeSubItem{Worked as a teacher assistant in math analysis in School №57 (for 9M)}
-        \resumeSubItem{Worked in summer informatics workshop as a coach for Russian national team candidates}
-        \resumeSubItem{Submit problems for high school Olympiads, such as \href{https://olymp.hse.ru/mmo/math}{\underline{Vysshaya Proba in math}}, \href{https://olympiads.ru/zaoch}{\underline{Open Olympiad in Informatics}}}
-        \resumeSubItem{Evaluate students' solutions of Russian math Olympiads, such as \href{https://olympiads.mccme.ru/matprazdnik}{\underline{Matprazdnik}}, Regional stage of the All-Russian Olympiad in Mathematics}
+        \resumeSubItem{\href{https://mccme.ru/mmks/index_eng.htm}{\underline{Moscow Mathematical Conference of High School Students}} (2017), \href{https://www.mccme.ru/circles/oim/mmks/works2017/kuyanov1.pdf}{\underline{Non-standard solution of a geometric problem}}}
     \resumeItemListEnd
 
 
@@ -130,15 +158,14 @@
         \resumeProjectHeading
         {\textbf{\href{https://github.com/m20-sch57/Fejudge}{\underline{Fejudge}}} $|$ \emph{Python, Linux kernel}}{September 2021}
         \resumeItemListStart
-            \resumeItem{This is a contest management system, like Topcoder or Codeforces.}
+            \resumeItem{This is a contest management system with a web interface.}
             \resumeItem{It uses several Linux kernel features and supports simultaneous evaluation of solutions on different machines.}
-            \resumeItem{Also provides a nice web interface for participants.}
         \resumeItemListEnd
 
         \resumeProjectHeading
         {\textbf{\href{https://github.com/m20-sch57/thetruehat}{\underline{TheTrueHat}}} $|$ \emph{JavaScript}}{August 2021}
         \resumeItemListStart
-            \resumeItem{Hat (Alias) is a multiplayer game, in which each player picks a word from the hat and explains it to their partner as quickly as possible. This project allows you to play Hat from your browser.}
+            \resumeItem{This project allows you to play the Hat (Alias) game from your browser.}
         \resumeItemListEnd 
 
         \resumeProjectHeading
@@ -154,10 +181,8 @@
 \section{Skills \& interests}
     \resumeItemListStart
         \resumeSubItem{\textbf{Programming languages: }{C/C++, Python, Kotlin, HTML/CSS, JavaScript, Bash, SQL}}
-        \resumeSubItem{\textbf{Frameworks: }{QT, numpy, pytorch, Flask, React, Vue}}
+        \resumeSubItem{\textbf{Libraries \& frameworks: }{QT, numpy, pytorch, Flask, React, Vue}}
         \resumeSubItem{\textbf{Tools: }{CI/CD, git, docker, gdb, cmake}}
-        \resumeSubItem{\textbf{Computer science skills: }{advanced algorithms \& data structures -- studied since 2016 for programming competitions}}
-        \resumeSubItem{\textbf{Mathematical skills: }{linear algebra and geometry, discrete math, probability theory, math analysis}}
         \resumeSubItem{\textbf{Interested in: }{discrete math, theoretical computer science}}
     \resumeItemListEnd
 
@@ -165,18 +190,11 @@
 \section{Olympiad achievements}
     \resumeItemListStart
         \resumeSubItem{Gold medal at \href{https://imc-math.org.uk/?year=2021}{\underline{IMC 2021}}}
-        \resumeSubItem{8th place (silver medal) at the Semifinal ICPC 2020 – 2021, NERC}
+        \resumeSubItem{Silver medal at \href{https://neerc.ifmo.ru/archive/2020.html}{\underline{Semifinal ICPC 2020, NERC}}}
         \resumeSubItem{Winner of several inter-university math competitions: \href{https://iuhd.edu.tm/competition/44}{\underline{NCUMC}}, \href{https://iuhd.edu.tm/competition/45}{\underline{OMOUS}}, \href{http://www.rkarasev.ru/note/66}{\underline{MIPT}}, \href{https://cs.hse.ru/en/announcements/504365867.html}{\underline{OSAM Comp'21}}}
         \resumeSubItem{Prize-winner of the All-Russian Olympiad in Mathematics (2018, 2019, 2020)}
         \resumeSubItem{Winner of the All-Russian Olympiad in Informatics (2018)}
-    \resumeItemListEnd
-
-
-\section{Other achievements}
-    \resumeItemListStart
-        \resumeSubItem{6 times winner of the \href{https://www.turgor.ru/en/}{\underline{International Mathematical Tournament of Towns}} (2014 - 2019) and took part in its Summer Conference}
-        \resumeSubItem{Participated in the summer school \href{https://www.mccme.ru/dubna/eng/}{\underline{Contemporary Mathematics}}}
-        \resumeSubItem{Made a presentation for the \href{https://mccme.ru/mmks/index_eng.htm}{\underline{Moscow Mathematical Conference of High School Students}} (2017), describing an ingenious solution of a geometrical problem}
+        \resumeSubItem{6 times winner of the \href{https://www.turgor.ru/en/}{\underline{International mathematical Tournament of towns}} (2014 - 2019)}
     \resumeItemListEnd
 
 
@@ -184,14 +202,6 @@
     \resumeItemListStart
         \resumeSubItem{English: C1 (IELTS 7.0)}
         \resumeSubItem{Russian: Native speaker}
-    \resumeItemListEnd
-
-
-\section{Hobbies}
-    \resumeItemListStart
-        \resumeSubItem{Railway modelling, Lego}
-        \resumeSubItem{Chess, speed-cubing (3x3, 36 secs), ping-pong}
-        \resumeSubItem{Classical piano -- finished 8-year Gnesin music school and performed with the orchestra, \href{https://www.youtube.com/user/FeodorKuyanov/playlists}{\underline{YouTube}}, winner of Moscow and international piano competitions}
     \resumeItemListEnd
 
 
