@@ -1,5 +1,12 @@
 # CV
 
-Куянов Фёдор Алексеевич, 201-1
+CV is available here: https://kuyanov.github.io/cv/cv-<target>.pdf,
 
-Резюме: https://kuyanov.github.io/cv/cv-common.pdf
+where <target> is `common`, `it` or `math`
+
+# Build
+
+```
+docker build -t cv_<target> --build-arg target=<target> .
+docker run -v $PWD/<target>:/cv/<target> -t cv_<target>
+```
