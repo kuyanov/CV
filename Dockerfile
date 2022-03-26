@@ -1,9 +1,9 @@
 FROM kuyanov/texlive:latest
 
-ARG target=common
+ARG target=math
 ENV target $target
 
-WORKDIR /cv
+WORKDIR /CV
 
-ENTRYPOINT [ "bash", "-c", "pdflatex -interaction=nonstopmode -output-directory=$target $target/cv-$target.tex" ]
+ENTRYPOINT [ "bash", "-c", "pdflatex -interaction=nonstopmode -output-directory=$target $target/CV-$target.tex" ]
 

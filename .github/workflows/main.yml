@@ -10,26 +10,19 @@ jobs:
       - name: Create pdf folder
         run: mkdir pdf
 
-      - name: Build cv_common
-        run: docker build -t cv_common --build-arg target=common .
-      - name: Run cv_common
-        run: docker run -v $PWD/common:/cv/common -t cv_common
-      - name: Collect cv-common.pdf
-        run: cp common/cv-common.pdf pdf/cv-common.pdf
-
-      - name: Build cv_math
+      - name: Build CV-math
         run: docker build -t cv_math --build-arg target=math .
-      - name: Run cv_math
-        run: docker run -v $PWD/math:/cv/math -t cv_math
-      - name: Collect cv-math.pdf
-        run: cp math/cv-math.pdf pdf/cv-math.pdf
+      - name: Run CV-math
+        run: docker run -v $PWD/math:/CV/math -t cv_math
+      - name: Collect CV-math.pdf
+        run: cp math/CV-math.pdf pdf/CV-math.pdf
 
-      - name: Build cv_it
+      - name: Build CV-it
         run: docker build -t cv_it --build-arg target=it .
-      - name: Run cv_it
-        run: docker run -v $PWD/it:/cv/it -t cv_it
-      - name: Collect cv-it.pdf
-        run: cp it/cv-it.pdf pdf/cv-it.pdf
+      - name: Run CV-it
+        run: docker run -v $PWD/it:/CV/it -t cv_it
+      - name: Collect CV-it.pdf
+        run: cp it/CV-it.pdf pdf/CV-it.pdf
 
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
