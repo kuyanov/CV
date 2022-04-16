@@ -48,9 +48,10 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
+\titlespacing{\section}{0pt}{15pt}{5pt}
 \titleformat{\section}{
     \scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+}{}{0em}{}[\color{black}\titlerule]
 
 \pdfgentounicode=1
 
@@ -88,9 +89,8 @@
 
 
 \begin{center}
-    {\Huge \scshape Fedor Kuyanov} \\ \vspace{3pt}
-    Moscow, Russia \\ \vspace{5pt}
-    \small \raisebox{-0.1\height}\faPhone\ +7 (926) 780-75-40 ~ \href{mailto:feodor.kuyanov@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{feodor.kuyanov@gmail.com}} ~ 
+    {\Huge \scshape Fedor Kuyanov} \\ \vspace{10pt}
+    \small \raisebox{-0.1\height}\faHome\ Moscow, Russia ~ \small \raisebox{-0.1\height}\faPhone\ +7 (926) 780-75-40 ~ \href{mailto:feodor.kuyanov@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{feodor.kuyanov@gmail.com}} ~ 
     \href{https://github.com/kuyanov}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/kuyanov}}
     \vspace{-8pt}
 \end{center}
@@ -106,16 +106,23 @@
 
 \section{Work experience}
     \resumeSubHeadingListStart
+
         \resumeTwoLineHeading
         {Yandex}{May 2021 -- August 2021}
         {Software Engineer Intern}{Moscow, Russia}
         \resumeItemListStart
             \resumeItem{Member of the team responsible for the quality of Yandex voice assistant Alice.}
             \resumeItem{Enhanced scenario classification by adding new factors and adapting learning process for different devices.}
-            \resumeItem{Added tests to ensure classifier's validity.}
             \resumeItem{Ran an experiment on real users to measure its quality.}
-            \resumeItem{As a result, the classifier's quality had been improved on some devices by 30\%.}
         \resumeItemListEnd
+
+        \resumeTwoLineHeading
+        {Summer informatics workshop}{June 2020}
+        {Coach}{Moscow, Russia}
+        \resumeItemListStart
+            \resumeItem{Prepared practice contests and tutorials for Russian national team candidates.}
+        \resumeItemListEnd
+
     \resumeSubHeadingListEnd
 
 
@@ -125,29 +132,27 @@
         \resumeProjectHeading
         {\textbf{\href{https://github.com/m20-sch57/fejudge}{\underline{Fejudge}}} $|$ \emph{Python, Linux kernel}}{September 2021}
         \resumeItemListStart
-            \resumeItem{This is a contest management system, like Topcoder or Codeforces.}
+            \resumeItem{This is a management system for programming contests with a nice web interface.}
             \resumeItem{It uses several Linux kernel features and supports simultaneous evaluation of solutions on different machines.}
-            \resumeItem{Also provides a nice web interface for participants.}
         \resumeItemListEnd
 
         \resumeProjectHeading
-        {\textbf{\href{https://github.com/m20-sch57/thetruehat}{\underline{TheTrueHat}}} $|$ \emph{JavaScript}}{August 2021}
+        {\textbf{\href{https://github.com/m20-sch57/thetruehat}{\underline{TheTrueHat}}} $|$ \emph{JavaScript, Vue}}{August 2021}
         \resumeItemListStart
             \resumeItem{This project allows you to play the Hat (Alias) game from your browser.}
         \resumeItemListEnd 
 
         \resumeProjectHeading
-        {\textbf{\href{https://github.com/JaggedLine/kotline}{\underline{Kotline}}} $|$ \emph{Kotlin}}{January 2021}
+        {\textbf{\href{https://github.com/JaggedLine/kotline}{\underline{Kotline}}} $|$ \emph{Kotlin, React}}{January 2021}
         \resumeItemListStart
-            \resumeItem{This is a geometric puzzle, in which you must build the longest non-self-intersecting polygonal chain from start to end.}
-            \resumeItem{Also contains a mode which allows you to find the best solution automatically.}
+            \resumeItem{This is a geometric puzzle where you must build the longest non-self-intersecting polygonal chain from start to end.}
+            \resumeItem{Also contains a mode allowing you to find the best solution automatically.}
         \resumeItemListEnd
 
         \resumeProjectHeading
         {\textbf{\href{https://github.com/m20-sch57/exam-system}{\underline{Examiner}}} $|$ \emph{Python, QT}}{September 2019}
         \resumeItemListStart
-            \resumeItem{The purpose of this project is to build a platform to automate school exams.}
-            \resumeItem{Provides UIs for students and teachers and enables automatic verification of various tasks.}
+            \resumeItem{A platform to automate school exams, with UIs for students and teachers.}
         \resumeItemListEnd
 
     \resumeSubHeadingListEnd
@@ -158,9 +163,15 @@
         \resumeSubItem{\textbf{Programming languages: }{C/C++, Python, Kotlin, HTML/CSS, JavaScript, Bash, SQL}}
         \resumeSubItem{\textbf{Libraries \& frameworks: }{QT, numpy, pytorch, Flask, React, Vue}}
         \resumeSubItem{\textbf{Tools: }{CI/CD, git, docker, gdb, cmake}}
-        \resumeSubItem{\textbf{Computer science skills: }{advanced algorithms \& data structures -- studied since 2016 for programming competitions}}
+        \resumeSubItem{\textbf{Computer science skills: }{advanced algorithms \& data structures -- studying since 2016 for programming competitions}}
         \resumeSubItem{\textbf{Mathematical skills: }{linear algebra and geometry, discrete math, probability theory, math analysis}}
         \resumeSubItem{\textbf{Interested in: }{theoretical computer science, high-load systems, web-servers, front-end (a little)}}
+    \resumeItemListEnd
+
+
+\section{Awards}
+    \resumeItemListStart
+        \resumeSubItem{Has been awarded \href{https://cs.hse.ru/en/stipend}{\underline{Ilya Segalovich Scholarship}}, the top award of Computer Science Faculty, HSE (2022)}
     \resumeItemListEnd
 
 
