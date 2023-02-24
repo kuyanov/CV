@@ -1,18 +1,16 @@
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage{tabularx}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
 \usepackage{fontawesome}
+\usepackage[hidelinks]{hyperref}
 \usepackage{multicol}
+\usepackage{textcomp}
+\usepackage{titlesec}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 
@@ -36,26 +34,26 @@
 
 \titlespacing{\section}{0pt}{15pt}{5pt}
 \titleformat{\section}{
-    \scshape\raggedright\large\bfseries
+	\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule]
 
 \newcommand{\resumeSubHeading}[1]{
-    \item\textbf{#1}\vspace{-7pt}
+	\item\textbf{#1}\vspace{-7pt}
 }
 
 \newcommand{\resumeTwoLineHeading}[4]{
-    \item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textbf{\small #2} \\
-        \textit{\small #3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+	\item
+	\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textbf{\small #2} \\
+		\textit{\small #3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
-        \small #1 & \textbf{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+	\item
+	\begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+		\small #1 & \textbf{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
@@ -73,133 +71,141 @@
 
 
 \begin{center}
-    {\Huge \scshape Fedor Kuyanov} \\ \vspace{10pt}
-    \small \raisebox{-0.1\height}\faHome\ Moscow, Russia ~ \small \raisebox{-0.1\height}\faPhone\ +7 (926) 780-75-40 ~ \href{mailto:feodor.kuyanov@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{feodor.kuyanov@gmail.com}} ~ 
-    \href{https://github.com/kuyanov}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/kuyanov}}
-    \vspace{-8pt}
+	{\Huge \scshape Fedor Kuyanov} \\ \vspace{10pt}
+	\small \raisebox{-0.1\height}\faHome\ Moscow, Russia ~ \small \raisebox{-0.1\height}\faPhone\ +7 (926) 780-75-40 ~ \href{mailto:feodor.kuyanov@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{feodor.kuyanov@gmail.com}} ~ 
+	\href{https://github.com/kuyanov}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/kuyanov}}
+	\vspace{-8pt}
 \end{center}
 
 
 \section{Education}
-    \resumeSubHeadingListStart
-        \resumeTwoLineHeading
-        {Higher School of Economics}{September 2020 -- July 2024}
-        {Bachelor in Computer Science, GPA 9.72/10}{Moscow, Russia}
-    \resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+\resumeTwoLineHeading
+{Higher School of Economics}{September 2020 -- July 2024}
+{Bachelor in Computer Science, GPA 9.72/10}{Moscow, Russia}
+\resumeSubHeadingListEnd
 
 
 \section{Work experience}
-    \resumeSubHeadingListStart
 
-        \resumeTwoLineHeading
-        {Huawei}{June 2022 -- December 2022}
-        {Software Engineer}{Moscow, Russia}
-        \resumeItemListStart
-            \resumeItem{Member of the graph computing team focused on the simulation of fluid and gas processes using discrete lattices.}
-            \resumeItem{Implemented distributed versions of algorithms in Linear Algebra, such as Conjugate gradient method and Lanczos algorithm.}
-        \resumeItemListEnd
+\resumeSubHeadingListStart
 
-        \resumeTwoLineHeading
-        {Yandex}{May 2021 -- August 2021}
-        {Software Engineer Intern}{Moscow, Russia}
-        \resumeItemListStart
-            \resumeItem{Member of the team responsible for the quality of Yandex voice assistant Alice.}
-            \resumeItem{Enhanced scenario classification by adding new factors and adapting learning process for different devices.}
-            \resumeItem{Ran an experiment on real users to measure its quality.}
-        \resumeItemListEnd
+\resumeTwoLineHeading
+{Huawei}{June 2022 -- December 2022}
+{Software Engineer}{Moscow, Russia}
+\resumeItemListStart
+\resumeItem{Member of the graph computing team focused on fluid and gas processes simulation using discrete lattices.}
+\resumeItem{Implemented distributed versions of algorithms in Linear Algebra, such as the Conjugate gradient method and Lanczos algorithm.}
+\resumeItemListEnd
 
-        \resumeTwoLineHeading
-        {Summer informatics workshop}{June 2020}
-        {Coach}{Moscow, Russia}
-        \resumeItemListStart
-            \resumeItem{Prepared practice contests and tutorials for Russian national team candidates.}
-        \resumeItemListEnd
+\resumeTwoLineHeading
+{Yandex}{May 2021 -- August 2021}
+{Software Engineer Intern}{Moscow, Russia}
+\resumeItemListStart
+\resumeItem{Worked in the team responsible for the quality of Yandex voice assistant Alice.}
+\resumeItem{Enhanced scenario classification by adding new factors and adapting the learning process for different devices.}
+\resumeItem{Ran an experiment on real users to measure its quality.}
+\resumeItemListEnd
 
-    \resumeSubHeadingListEnd
+\resumeTwoLineHeading
+{Summer informatics workshop}{June 2020}
+{Coach}{Moscow, Russia}
+\resumeItemListStart
+\resumeItem{Prepared practice contests and tutorials for Russian national team candidates.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 
 \section{Projects}
-    \resumeSubHeadingListStart
 
-        \resumeProjectHeading
-        {\textbf{\href{https://github.com/kuyanov/wordle}{\underline{Wordle}}} $|$ \emph{C++, JavaScript}}{August 2022}
-        \resumeItemListStart
-            \resumeItem{The goal of this game is to guess a 5-letter word in 6 tries, based on the information about each letter.}
-            \resumeItem{Two modes: ``random'' and ``hater'', meaning that the answer is selected randomly or adaptively.}
-            \resumeItem{Also implemented a heuristic strategy that uses 3.52 tries on average, which is close to the best \href{https://auction-upload-files.s3.amazonaws.com/Wordle_Paper_Final.pdf}{\underline{3.42}}.}
-        \resumeItemListEnd
+\resumeSubHeadingListStart
 
-        \resumeProjectHeading
-        {\textbf{\href{https://github.com/m20-sch57/fejudge}{\underline{Fejudge}}} $|$ \emph{Python, Linux kernel}}{September 2021}
-        \resumeItemListStart
-            \resumeItem{This is a management system for programming contests with a web interface.}
-            \resumeItem{It uses several Linux kernel features (such as cgroups) and supports simultaneous evaluation on different machines.}
-        \resumeItemListEnd
+\resumeProjectHeading
+{\textbf{\href{https://github.com/kuyanov/wordle}{\underline{Wordle}}} $|$ \emph{C++, JavaScript}}{August 2022}
+\resumeItemListStart
+\resumeItem{The goal of this game is to guess a 5-letter word in 6 tries based on the information about each letter.}
+\resumeItem{Two modes: ``random'' and ``hater'', meaning that the answer is selected randomly or adaptively.}
+\resumeItem{Also implemented a heuristic strategy that uses 3.52 tries on average, which is close to the record \href{https://auction-upload-files.s3.amazonaws.com/Wordle_Paper_Final.pdf}{\underline{3.42}}.}
+\resumeItemListEnd
 
-        \resumeProjectHeading
-        {\textbf{\href{https://github.com/m20-sch57/thetruehat}{\underline{TheTrueHat}}} $|$ \emph{JavaScript, Vue}}{August 2021}
-        \resumeItemListStart
-            \resumeItem{This project allows playing the Hat (Alias) game from the browser.}
-        \resumeItemListEnd
+\resumeProjectHeading
+{\textbf{\href{https://github.com/m20-sch57/fejudge}{\underline{Fejudge}}} $|$ \emph{Python, Linux kernel}}{September 2021}
+\resumeItemListStart
+\resumeItem{This is a management system for programming contests with a web interface.}
+\resumeItem{It uses several Linux kernel features (such as cgroups) and supports simultaneous evaluation on different machines.}
+\resumeItemListEnd
 
-        \resumeProjectHeading
-        {\textbf{\href{https://github.com/JaggedLine/kotline}{\underline{Kotline}}} $|$ \emph{Kotlin, React}}{January 2021}
-        \resumeItemListStart
-            \resumeItem{This is a geometric puzzle where one must build the longest non-self-intersecting polygonal chain from start to end.}
-            \resumeItem{Also contains a mode where one can find the best solution automatically.}
-        \resumeItemListEnd
+\resumeProjectHeading
+{\textbf{\href{https://github.com/m20-sch57/thetruehat}{\underline{TheTrueHat}}} $|$ \emph{JavaScript, Vue}}{August 2021}
+\resumeItemListStart
+\resumeItem{This project allows playing the Hat (Alias) game from the browser.}
+\resumeItemListEnd
 
-        \resumeProjectHeading
-        {\textbf{\href{https://github.com/m20-sch57/exam-system}{\underline{Examiner}}} $|$ \emph{Python, QT}}{September 2019}
-        \resumeItemListStart
-            \resumeItem{A platform to automate school exams, with UIs for students and teachers.}
-        \resumeItemListEnd
+\resumeProjectHeading
+{\textbf{\href{https://github.com/JaggedLine/kotline}{\underline{Kotline}}} $|$ \emph{Kotlin, React}}{January 2021}
+\resumeItemListStart
+\resumeItem{This is a geometric puzzle where one must build the longest non-self-intersecting polygonal chain from start to end.}
+\resumeItem{Also contains a mode where one can find the best solution automatically.}
+\resumeItemListEnd
 
-    \resumeSubHeadingListEnd
+\resumeProjectHeading
+{\textbf{\href{https://github.com/m20-sch57/exam-system}{\underline{Examiner}}} $|$ \emph{Python, QT}}{September 2019}
+\resumeItemListStart
+\resumeItem{A platform to automate school exams, with UIs for students and teachers.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 
 \section{Skills \& interests}
-    \resumeItemListStart
-        \resumeSubItem{\textbf{Programming languages: }{C/C++, Python, Kotlin, HTML/CSS, JavaScript, Bash, SQL}}
-        \resumeSubItem{\textbf{Libraries \& frameworks: }{QT, numpy, matplotlib, pandas, pytorch, Flask, React, Vue}}
-        \resumeSubItem{\textbf{Tools: }{CI/CD, git, docker, gdb, cmake}}
-        \resumeSubItem{\textbf{Computer Science skills: }{advanced algorithms and data structures, including distributed and streaming algorithms}}
-        \resumeSubItem{\textbf{Mathematical skills: }{Linear Algebra and Geometry, Discrete Math, Probability Theory, Math Analysis, etc.}}
-        \resumeSubItem{\textbf{Interested in: }{Theoretical Computer Science, high-load systems, web-servers, front-end}}
-    \resumeItemListEnd
+
+\resumeItemListStart
+\resumeSubItem{\textbf{Programming languages: }{C/C++, Python, Kotlin, HTML/CSS, JavaScript, Bash, SQL}}
+\resumeSubItem{\textbf{Libraries \& frameworks: }{QT, NumPy, matplotlib, pandas, PyTorch, Flask, React, Vue}}
+\resumeSubItem{\textbf{Tools: }{CI/CD, git, docker, gdb, cmake}}
+\resumeSubItem{\textbf{Computer Science skills: }{advanced algorithms and data structures, including distributed and streaming algorithms}}
+\resumeSubItem{\textbf{Mathematical skills: }{Linear Algebra and Geometry, Discrete Math, Probability Theory, Math Analysis, etc.}}
+\resumeSubItem{\textbf{Interested in: }{Theoretical Computer Science, high-load systems, web-servers, front-end}}
+\resumeItemListEnd
 
 
 \section{Awards}
-    \resumeItemListStart
-        \resumeSubItem{\href{https://cs.hse.ru/en/stipend}{\underline{Ilya Segalovich Scholarship}}, the top award of Computer Science Faculty, HSE (2022)}
-        \resumeSubItem{\href{https://www.tinkoff.ru/about/news/06042022-tinkoff-launches-scholarship-programme-for-russias-young-talent-eng/}{\underline{Tinkoff Scholarship}} (2022)}
-    \resumeItemListEnd
+
+\resumeItemListStart
+\resumeSubItem{\href{https://cs.hse.ru/en/stipend}{\underline{Ilya Segalovich Scholarship}}, the top award of Computer Science Faculty, HSE (2022)}
+\resumeSubItem{\href{https://www.tinkoff.ru/about/news/06042022-tinkoff-launches-scholarship-programme-for-russias-young-talent-eng/}{\underline{Tinkoff Scholarship}} (2022)}
+\resumeItemListEnd
 
 
 \section{Olympiad achievements}
-    \resumeItemListStart
-        \resumeSubItem{Gold medal at \href{https://imc-math.org.uk/?year=2021}{\underline{IMC 2021}} and \href{https://imc-math.org.uk/?year=2022}{\underline{IMC 2022}}}
-        \resumeSubItem{Silver medal at \href{https://neerc.ifmo.ru/archive/2020.html}{\underline{Semifinal ICPC 2020, NERC}}}
-        \resumeSubItem{1st place at the All-Russian Team Olympiad in Informatics (2018-2019)}
-        \resumeSubItem{Winner of the All-Russian Olympiad in Informatics (2018), prize-winner in 2017, 2019, 2020}
-        \resumeSubItem{Prize-winner of the All-Russian Olympiad in Mathematics (2018, 2019, 2020)}
-        \resumeSubItem{\href{https://codeforces.com/profile/Kuyan}{\underline{Codeforces}}}
-    \resumeItemListEnd
+
+\resumeItemListStart
+\resumeSubItem{Gold medal at \href{https://imc-math.org.uk/?year=2021}{\underline{IMC 2021}} and \href{https://imc-math.org.uk/?year=2022}{\underline{IMC 2022}}}
+\resumeSubItem{Silver medal at \href{https://neerc.ifmo.ru/archive/2020.html}{\underline{Semifinal ICPC 2020, NERC}}}
+\resumeSubItem{1st place at the All-Russian Team Olympiad in Informatics (2018-2019)}
+\resumeSubItem{Winner of the All-Russian Olympiad in Informatics (2018), prize-winner in 2017, 2019, 2020}
+\resumeSubItem{Prize-winner of the All-Russian Olympiad in Mathematics (2018, 2019, 2020)}
+\resumeSubItem{\href{https://codeforces.com/profile/Kuyan}{\underline{Codeforces}}}
+\resumeItemListEnd
 
 
 \section{Languages}
-    \resumeItemListStart
-        \resumeSubItem{English: C1 (IELTS 7.0)}
-        \resumeSubItem{Russian: Native speaker}
-    \resumeItemListEnd
+
+\resumeItemListStart
+\resumeSubItem{English: C1 (IELTS 7.0)}
+\resumeSubItem{Russian: Native speaker}
+\resumeItemListEnd
 
 
 \section{Hobbies}
-    \resumeItemListStart
-        \resumeSubItem{Railway modelling, Lego}
-        \resumeSubItem{Chess, speed-cubing (3x3, 36 secs), ping-pong}
-        \resumeSubItem{Classical piano -- finished 8-year Gnesin music school and performed with the orchestra, \href{https://www.youtube.com/user/FeodorKuyanov/playlists}{\underline{YouTube}}, winner of Moscow and international piano competitions}
-    \resumeItemListEnd
+
+\resumeItemListStart
+\resumeSubItem{Railway modeling, Lego}
+\resumeSubItem{Chess, speed-cubing (3x3, 36 secs), ping-pong}
+\resumeSubItem{Classical piano -- finished 8-year Gnesin music school and performed with the orchestra, \href{https://www.youtube.com/user/FeodorKuyanov/playlists}{\underline{YouTube}}, winner of Moscow and international piano competitions}
+\resumeItemListEnd
 
 
 \end{document}
