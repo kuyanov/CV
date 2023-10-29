@@ -49,10 +49,10 @@
 	\end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
+\newcommand{\resumeProjectHeading}[3]{
 	\item
 	\begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
-		\small #1 & \textbf{\small #2} \\
+		\textbf{\small #1} $|$ \emph{\small #2} & \textbf{\small #3} \\
 	\end{tabular*}\vspace{-7pt}
 }
 
@@ -83,13 +83,15 @@
 \resumeSubHeadingListStart
 
 \resumeTwoLineHeading
-{Higher School of Economics}{September 2020 -- July 2024}
-{Bachelor in Computer Science, GPA 9.72/10}{Moscow, Russia}
+{HSE University}{September 2020 -- July 2024}
+{Bachelor in Computer Science, GPA 9.8/10, rank 1/260}{Moscow, Russia}
 
 \resumeSubHeading{Summer schools}
 \resumeItemListStart
 \resumeItem{\href{https://mccme.ru/dubna/eng/}{\underline{Contemporary Mathematics}} (2019)}
+\resumeItem{\href{https://in.harbour.space/tech-scouts/}{\underline{Harbour.Space Tech Scouts}} (2019, advanced technical track)}
 \resumeItem{\href{https://www.turgor.ru/en/lktg/index.php}{\underline{Summer Conference of the International Mathematical Tournament of Towns}} (2018)}
+\resumeItem{\href{http://lksh.ru}{\underline{Summer Computer School}} (2014 -- 2017, levels C', B', B, A)}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -100,10 +102,16 @@
 \resumeSubHeadingListStart
 
 \resumeTwoLineHeading
-{HSE, Laboratory of Theoretical Computer Science}{September 2022 -- December 2022}
-{Research assistant}{Moscow, Russia}
+{HSE, project group ``Combinatorial and numerical problems on lattices''}{January 2023 -- now}{Research assistant}{Moscow, Russia}
 \resumeItemListStart
 \resumeItem{Research in Mathematical Physics and Number Theory: Feynman checkers.}
+\resumeItemListEnd
+
+\resumeTwoLineHeading
+{HSE, Laboratory of Theoretical Computer Science}{September 2022 -- now}
+{Research assistant}{Moscow, Russia}
+\resumeItemListStart
+\resumeItem{Research in Linear Algebra and Complexity Theory: minimizing the number of operations for matrix multiplication.}
 \resumeItemListEnd
 
 \resumeTwoLineHeading
@@ -118,7 +126,7 @@
 {Software Engineer}{Moscow, Russia}
 \resumeItemListStart
 \resumeItem{Member of the graph computing team focused on fluid and gas processes simulation using discrete lattices.}
-\resumeItem{Implemented distributed versions of algorithms in Linear Algebra, such as the Conjugate gradient method and Lanczos algorithm.}
+\resumeItem{Implemented distributed versions of the algorithms such as the Conjugate gradient method and Lanczos algorithm.}
 \resumeItemListEnd
 
 \resumeTwoLineHeading
@@ -142,7 +150,7 @@
 \section{Publications}
 
 \resumeItemListStart
-\resumeSubItem{Feynman checkers: number-theoretic properties (preprint, \href{https://arxiv.org/abs/2210.07306}{\underline{arXiv:2210.07306}})}
+\resumeSubItem{\href{https://www.worldscientific.com/doi/10.1142/S0129055X23500228}{\underline{Feynman checkers: number-theoretic properties}} (Reviews in Mathematical Physics, 2023, \href{https://arxiv.org/abs/2210.07306}{\underline{arXiv}})}
 \resumeItemListEnd
 
 
@@ -159,31 +167,36 @@
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\textbf{\href{https://github.com/kuyanov/wordle}{\underline{Wordle}}} $|$ \emph{C++, JavaScript}}{August 2022}
+{\href{https://github.com/Qock-Foundation/matrix-multiplication}{\underline{MatrixMultiplication}}}{Python, PyTorch}{October 2023}
+\resumeItemListStart
+\resumeItem{Python scripts generating optimal matrix multiplication algorithms for small sizes (up to 3).}
+\resumeItem{Uses modern optimization techniques from Machine Learning and performs greedy rounding to get rational coefficients.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\href{https://github.com/kuyanov/wordle}{\underline{Wordle}}}{C++, JavaScript}{August 2022}
 \resumeItemListStart
 \resumeItem{The goal of this game is to guess a 5-letter word in 6 tries based on the information about each letter.}
-\resumeItem{Two modes: ``random'' and ``hater'', meaning that the answer is selected randomly or adaptively.}
-\resumeItem{Also implemented a heuristic strategy that uses 3.52 tries on average, which is close to the record \href{https://auction-upload-files.s3.amazonaws.com/Wordle_Paper_Final.pdf}{\underline{3.42}}.}
+\resumeItem{Implemented a strategy (using B\&B algorithm and information theory) that achieves the world record of \href{https://auction-upload-files.s3.amazonaws.com/Wordle_Paper_Final.pdf}{\underline{3.42 tries}}.}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\textbf{\href{https://github.com/m20-sch57/fejudge}{\underline{Fejudge}}} $|$ \emph{Python, Linux kernel}}{September 2021}
+{\href{https://github.com/m20-sch57/fejudge}{\underline{Fejudge}}}{Python, Linux kernel}{September 2021}
 \resumeItemListStart
-\resumeItem{This is a management system for programming contests with a web interface.}
-\resumeItem{It uses several Linux kernel features (such as cgroups) and supports simultaneous evaluation on different machines.}
+\resumeItem{This is a management system for programming contests with a convenient web interface.}
+\resumeItem{Uses various Linux kernel features (such as cgroups) and supports simultaneous evaluation on different machines.}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\textbf{\href{https://github.com/m20-sch57/thetruehat}{\underline{TheTrueHat}}} $|$ \emph{JavaScript, Vue}}{August 2021}
+{\href{https://github.com/m20-sch57/thetruehat}{\underline{TheTrueHat}}}{JavaScript, Vue}{August 2021}
 \resumeItemListStart
 \resumeItem{This project allows playing the Hat (Alias) game from the browser.}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\textbf{\href{https://github.com/JaggedLine/kotline}{\underline{Kotline}}} $|$ \emph{Kotlin, React}}{January 2021}
+{\href{https://github.com/JaggedLine/kotline}{\underline{Kotline}}}{Kotlin, React, JavaScript}{January 2021}
 \resumeItemListStart
-\resumeItem{This is a geometric puzzle where one must build the longest non-self-intersecting polygonal chain from start to end.}
-\resumeItem{Also contains a mode where one can find the best solution automatically.}
+\resumeItem{Geometric puzzle where one must build the longest non-self-intersecting polygonal chain from start to end.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -195,14 +208,14 @@
 \resumeSubItem{\textbf{Programming languages: }{C/C++, Python, Kotlin, HTML/CSS, JavaScript, Bash, SQL}}
 \resumeSubItem{\textbf{Libraries \& frameworks: }{QT, NumPy, matplotlib, pandas, PyTorch, Flask, React, Vue}}
 \resumeSubItem{\textbf{Tools: }{CI/CD, git, docker, gdb, cmake}}
-\resumeSubItem{\textbf{Interested in: }{Complexity Theory, Discrete Math, Combinatorics, Mathematical Logic}}
+\resumeSubItem{\textbf{Interested in: }{Quantum Computing, Complexity Theory, Linear Algebra, Discrete Math, Combinatorics}}
 \resumeItemListEnd
 
 
 \section{Awards}
 
 \resumeItemListStart
-\resumeSubItem{\href{https://cs.hse.ru/en/stipend}{\underline{Ilya Segalovich Scholarship}}, the top award of Computer Science Faculty, HSE (2022)}
+\resumeSubItem{\href{https://cs.hse.ru/en/stipend}{\underline{Ilya Segalovich Scholarship}}, the top award of Computer Science Faculty, HSE (2022, 2023)}
 \resumeSubItem{\href{https://www.tinkoff.ru/about/news/06042022-tinkoff-launches-scholarship-programme-for-russias-young-talent-eng/}{\underline{Tinkoff Scholarship}} (2022)}
 \resumeItemListEnd
 
@@ -210,12 +223,12 @@
 \section{Olympiad achievements}
 
 \resumeItemListStart
-\resumeSubItem{Gold medal at \href{https://imc-math.org.uk/?year=2021}{\underline{IMC 2021}} and \href{https://imc-math.org.uk/?year=2022}{\underline{IMC 2022}}}
+\resumeSubItem{Three times gold medal at \href{https://imc-math.org.uk}{\underline{IMC}} (2021 -- 2023)}
 \resumeSubItem{Silver medal at \href{https://neerc.ifmo.ru/archive/2020.html}{\underline{Semifinal ICPC 2020, NERC}}}
 \resumeSubItem{Winner of several inter-university math competitions: \href{https://iuhd.edu.tm/competition/44}{\underline{NCUMC}}, \href{https://iuhd.edu.tm/competition/45}{\underline{OMOUS}}, \href{http://www.rkarasev.ru/note/66}{\underline{MIPT}}, \href{https://cs.hse.ru/en/announcements/504365867.html}{\underline{OSAM Comp'21}}}
 \resumeSubItem{Prize-winner of the All-Russian Olympiad in Mathematics (2018, 2019, 2020)}
 \resumeSubItem{Winner of the All-Russian Olympiad in Informatics (2018), prize-winner in 2017, 2019, 2020}
-\resumeSubItem{6 times winner of the \href{https://www.turgor.ru/en/}{\underline{International Mathematical Tournament of Towns}} (2014 - 2019)}
+\resumeSubItem{Six times winner of the \href{https://www.turgor.ru/en/}{\underline{International Mathematical Tournament of Towns}} (2014 - 2019)}
 \resumeItemListEnd
 
 
