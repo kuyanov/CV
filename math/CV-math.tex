@@ -6,10 +6,13 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
+\usepackage{float}
 \usepackage{fontawesome}
+\usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{multicol}
 \usepackage{textcomp}
+\usepackage{tabularx}
 \usepackage{titlesec}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
@@ -69,13 +72,23 @@
 
 \begin{document}
 
+\begin{tabular}{l c}
+	\begin{minipage}{0.15\textwidth}
+		\includegraphics[width=\textwidth]{25.11.23-2.jpg}
+	\end{minipage} &
+	\begin{minipage}{0.85\textwidth}
+		\begin{center}
+			{\Huge \scshape Fedor Kuyanov} \\ 
+			\vspace{15pt}
+			\small \raisebox{-0.1\height}\faHome\ Moscow, Russia ~ 
+			\small \raisebox{-0.1\height}\faPhone\ +7 (926) 780-75-40 ~ \\
+			\vspace{5pt}
+			\href{mailto:feodor.kuyanov@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{feodor.kuyanov@gmail.com}} ~ 
+			\href{https://github.com/kuyanov}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/kuyanov}}
+		\end{center}
+	\end{minipage}
+\end{tabular}
 
-\begin{center}
-	{\Huge \scshape Fedor Kuyanov} \\ \vspace{10pt}
-	\small \raisebox{-0.1\height}\faHome\ Moscow, Russia ~ \small \raisebox{-0.1\height}\faPhone\ +7 (926) 780-75-40 ~ \href{mailto:feodor.kuyanov@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{feodor.kuyanov@gmail.com}} ~ 
-	\href{https://github.com/kuyanov}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/kuyanov}}
-	\vspace{-8pt}
-\end{center}
 
 
 \section{Education}
@@ -102,7 +115,7 @@
 \resumeSubHeadingListStart
 
 \resumeTwoLineHeading
-{HSE, Laboratory of Theoretical Computer Science}{September 2022 -- present}
+{HSE, Laboratory of Theoretical Computer Science}{September 2021 -- present}
 {Research assistant}{Moscow, Russia}
 \resumeItemListStart
 \resumeItem{Research in mathematical physics and number theory: Feynman checkers.}

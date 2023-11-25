@@ -3,7 +3,7 @@ FROM kuyanov/texlive:latest
 ARG target=math
 ENV target $target
 
-WORKDIR /CV
+WORKDIR /CV/$target
 
-ENTRYPOINT [ "bash", "-c", "pdflatex -interaction=nonstopmode -output-directory=$target $target/CV-$target.tex" ]
+ENTRYPOINT [ "bash", "-c", "pdflatex -interaction=nonstopmode CV-$target.tex" ]
 
